@@ -6,13 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/scripts.js" defer></script>
     <title>Desafio Kidopi</title>
 </head>
 
 <body>
     <h1>Desafio Kidopi</h1>
-    <select id="select-country" onchange="getByCountry()">
+    <select id="select-country" onchange="selectCountry()">
         <option value="">Selecione...</option>
         <option value="Australia">Australia</option>
         <option value="Brazil">Brasil</option>
@@ -23,5 +22,15 @@
     <p id="loading-message" class="hide">Carregando...</p>
     <div id="table-container" class="hide"></div>
 </body>
+
+<footer>
+    <p id="last-seach-content" class="hide">
+        Ultima consulta em
+        <span id="last-seach-date"></span> país
+        <span id="last-seach-country"></span>
+    </p>
+</footer>
+
+<script src="js/scripts.js"></script>
 
 </html>
