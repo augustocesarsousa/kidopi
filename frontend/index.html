@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Desafio Kidopi</title>
+</head>
+
+<body>
+    <header>
+        <h1>Desafio Kidopi</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="compare.html">Comparar</a></li>
+        </ul>
+    </header>
+    <div class="container">
+        <div class="select-country-container">
+            <div class="select-country-content">
+                <label for="select-country">Selecione o país:</label>
+                <select id="select-country" name="select-country">
+                    <option value="">Selecione...</option>
+                </select>
+                <span id="select-country-message" class="hide"></span>
+            </div>
+            <button id="select-country-btn">Pesquisar</button>
+        </div>
+        <p id="total-cases" class="hide"></p>
+        <p id="total-deaths" class="hide"></p>
+        <p id="loading-message" class="hide">Carregando...</p>
+        <div id="table-container" class="hide"></div>
+    </div>
+</body>
+
+<footer>
+    <p id="last-search-content" class="hide">
+        Última consulta em
+        <span id="last-search-date"></span>, país
+        <span id="last-search-country"></span>
+    </p>
+</footer>
+
+<script src="./js/index-main.js" type="module"></script>
+
+</html>

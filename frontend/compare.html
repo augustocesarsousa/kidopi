@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Comparar</title>
+</head>
+
+<body>
+    <header>
+        <h1>Desafio Kidopi</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="compare.html">Comparar</a></li>
+        </ul>
+    </header>
+    <div class="container">
+        <div class="select-country-container">
+            <div class="select-country1-content">
+                <label for="select-country1">Selecione o país:</label>
+                <select id="select-country1" name="select-country1">
+                    <option value="">Selecione...</option>
+                </select>
+                <span id="select-country1-message" class="hide"></span>
+            </div>
+            <div class="select-country2-content">
+                <label for="select-country2">Selecione o país:</label>
+                <select id="select-country2" name="select-country2">
+                    <option value="">Selecione...</option>
+                </select>
+                <span id="select-country2-message" class="hide"></span>
+            </div>
+            <button id="select-country-btn">Pesquisar</button>
+        </div>
+        <p id="loading-message" class="hide">Carregando...</p>
+        <div id="table-container" class="hide"></div>
+    </div>
+    <script src="./js/compare-main.js" type="module"></script>
+</body>
+
+</html>
