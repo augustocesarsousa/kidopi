@@ -1,0 +1,7 @@
+/* select */
+.select-country1-content label,
+#select-country1,
+.select-country2-content label,
+#select-country2 {
+    margin-right: 10px;
+}

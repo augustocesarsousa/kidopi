@@ -51,12 +51,12 @@ li {
 
 .nav-link:hover {
     background-color: var(--green-50);
-    color: var(--gray-25);
+    color: var(--white);
 }
 
 .active-link {
     background-color: var(--green);
-    color: var(--gray-25);
+    color: var(--white);
 }
 
 .nav-hamburger {

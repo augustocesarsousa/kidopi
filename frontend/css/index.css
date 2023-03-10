@@ -1,33 +1,5 @@
 @import url(default.css);
 
-/* select */
-.select-country-container {
-    min-height: 50px;
-    background-color: var(--white);
-    display: flex;
-    align-items: center;
-    border-radius: 10px;
-    padding: 10px;
-}
-
-.select-country-content,
-#select-country-btn {
-    margin-right: 10px;
-}
-
-#select-country-message {
-    color: var(--red);
-}
-
-/* data */
-.data-container {
-    background-color: var(--white);
-    padding: 40px;
-    border-radius: 10px;
-    margin-top: 10px;
-    margin-bottom: 50px;
-}
-
 /* totais */
 .data-total-container {
     display: flex;
@@ -71,7 +43,7 @@
 }
 
 .table-content tbody tr:nth-of-type(even) {
-    background-color: var(--gray-50);
+    background-color: var(--gray-30);
 }
 
 .table-content tbody tr:last-of-type {
@@ -82,14 +54,4 @@
 .table-content tbody tr td:nth-child(3),
 .table-content tbody tr td:nth-child(4) {
     text-align: right;
-}
-
-/* messages */
-#loading-message {
-    position: fixed;
-    left: 50%;
-    bottom: 40%;
-    transform: translate(-50%, -50%);
-    font-size: 60px;
-    color: var(--gray-25);
 }

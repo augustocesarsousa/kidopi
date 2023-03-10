@@ -2,8 +2,7 @@ import { getByCountryKidopi, getCountriesAvailableKidopi } from "./services/kido
 
 const inputSelectCountry1 = document.getElementById("select-country1");
 const inputSelectCountry2 = document.getElementById("select-country2");
-const spanSelectCountry1Message = document.getElementById("select-country1-message");
-const spanSelectCountry2Message = document.getElementById("select-country2-message");
+const spanSelectCountryMessage = document.getElementById("select-country-message");
 const btnSelectCountry = document.getElementById("select-country-btn");
 const divTableContainer = document.getElementById("table-container");
 let totalCasesCountry = 0;
@@ -18,19 +17,12 @@ btnSelectCountry.addEventListener("click", async () => {
     const country2 = inputSelectCountry2.options[inputSelectCountry2.selectedIndex].value;
     let isSelectsValid = true;
 
-    spanSelectCountry1Message.classList.add("hide");
-    spanSelectCountry2Message.classList.add("hide");
+    spanSelectCountryMessage.classList.add("hide");
 
-    if (country1 === "") {
+    if (country1 === "" || country2 === "") {
         isSelectsValid = false;
-        spanSelectCountry1Message.innerText = "Selecione o primeiro país!";
-        spanSelectCountry1Message.classList.remove("hide");
-    }
-
-    if (country2 === "") {
-        isSelectsValid = false;
-        spanSelectCountry2Message.innerText = "Selecione o segundo país!";
-        spanSelectCountry2Message.classList.remove("hide");
+        spanSelectCountryMessage.innerText = "Seleciona os dois países!";
+        spanSelectCountryMessage.classList.remove("hide");
     }
 
     if (isSelectsValid) {

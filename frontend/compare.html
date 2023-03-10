@@ -6,7 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/compare.css">
+    <link rel="stylesheet" href="css/grafico.css">
     <title>Comparar</title>
 </head>
 
@@ -38,24 +41,57 @@
     <main class="main-container max-width">
         <div class="select-country-container">
             <div class="select-country1-content">
-                <label for="select-country1">Selecione o país:</label>
+                <label for="select-country1">Primeiro país:</label>
                 <select id="select-country1" name="select-country1">
                     <option value="">Selecione...</option>
                 </select>
-                <span id="select-country1-message" class="hide"></span>
             </div>
             <div class="select-country2-content">
-                <label for="select-country2">Selecione o país:</label>
+                <label for="select-country2">Segundo país:</label>
                 <select id="select-country2" name="select-country2">
                     <option value="">Selecione...</option>
                 </select>
-                <span id="select-country2-message" class="hide"></span>
             </div>
-            <button id="select-country-btn">Pesquisar</button>
+            <button id="select-country-btn" class="btn">Pesquisar</button>
+            <span id="select-country-message" class="hide"></span>
+        </div>
+        <div id="table-container" class="data-container">
+
+            <div class="grafico-barras">
+                <div class="colunas">
+                    <div class="escala-y">
+                        a
+                    </div>
+                    <div class="area-grafico">
+                        <div class="area-barras">
+                            <div class="divisao">
+                                <div class="barra verde" style="height: 80%;"></div>
+                                <div class="barra azul" style="height: 40%;"></div>
+                            </div>
+                            <div class="divisao">
+                                <div class="barra verde" style="height: 40%;"></div>
+                                <div class="barra azul" style="height: 30%;"></div>
+                            </div>
+                            <div class="divisao">
+                                <div class="barra verde" style="height: 10%;"></div>
+                                <div class="barra azul" style="height: 5%;"></div>
+                            </div>
+                        </div>
+                        <div class="escala-x">
+                            c
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <p id="loading-message" class="hide">Carregando...</p>
-        <div id="table-container" class="hide"></div>
     </main>
+    <footer class="footer-container">
+        <p id="last-search-content">
+            <span>Desenvolvido por <a target="_blank" href="https://github.com/augustocesarsousa">Augusto
+                    Cesar</a></span>
+        </p>
+    </footer>
     <script src="./js/compare-main.js" type="module"></script>
     <script src="./js/menu.js"></script>
 </body>
