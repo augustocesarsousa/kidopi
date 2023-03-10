@@ -1,15 +1,4 @@
-:root {
-    --black: #000;
-    --gray-25: #f2f2f2;
-    --yellow: #ff0;
-    --green: #20E070;
-}
-
-/* navbar */
-
-header {
-    background-color: var(--gray-25);
-}
+@import url(default.css);
 
 li {
     list-style: none;
@@ -20,7 +9,6 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
     margin: auto;
 }
 
@@ -61,7 +49,11 @@ li {
     transition: .3s ease all;
 }
 
-.nav-link:hover,
+.nav-link:hover {
+    background-color: var(--green-50);
+    color: var(--gray-25);
+}
+
 .active-link {
     background-color: var(--green);
     color: var(--gray-25);

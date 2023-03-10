@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="icon" type="image/vnd.microsoft.icon" href="assets/img/favicon.ico">
     <title>Desafio Kidopi</title>
 </head>
@@ -16,50 +18,58 @@
         <div class="header-container" id="home">
             <nav class="navbar max-width">
                 <div class="nav-logo">
-                    <a href="#">
-                        <img class="nav-logo-img" src="assets/img/logo_kidopi.png" alt="Logo kidopi simples, sem texto. Uma letra K formada por 3 semi-retângulos, um verde, um vermelho e um azul">
+                    <a href="index.html">
+                        <img class="nav-logo-img" src="assets/img/logo_kidopi.png"
+                            alt="Logo kidopi simples, sem texto. Uma letra K formada por 3 semi-retângulos, um verde, um vermelho e um azul">
                     </a>
                 </div>
                 <!-- <div class="nav-menu-content"> -->
-                    <ul class="nav-menu">
-                        <li class="nav-item"><a href="index.html" class="nav-link active-link">Home</a></li>
-                        <li class="nav-item"><a href="compare.html" class="nav-link">Comparar</a></li>
-                        <li class="nav-item"><a href="about.html" class="nav-link">Sobre</a></li>
-                    </ul>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link active-link">Home</a></li>
+                    <li class="nav-item"><a href="compare.html" class="nav-link">Comparar</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">Sobre</a></li>
+                </ul>
                 <!-- </div> -->
                 <div class="nav-hamburger">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
-                </div>                
+                </div>
             </nav>
         </div>
     </header>
     <main class="main-container max-width">
         <div class="select-country-container">
             <div class="select-country-content">
-                <label for="select-country">Selecione o país:</label>
+                <label for="select-country">Países:</label>
                 <select id="select-country" name="select-country">
                     <option value="">Selecione...</option>
                 </select>
-                <span id="select-country-message" class="hide"></span>
             </div>
-            <button id="select-country-btn">Pesquisar</button>
+            <button id="select-country-btn" class="btn">Pesquisar</button>
+            <span id="select-country-message" class="hide"></span>
         </div>
-        <p id="total-cases" class="hide"></p>
-        <p id="total-deaths" class="hide"></p>
-        <p id="loading-message" class="hide">Carregando...</p>
-        <div id="table-container" class="hide"></div>
+        <div id="data-table-container" class="data-container hide">
+            <div class="data-total-container">
+                <p id="total-cases" class="hide"></p>
+                <p id="total-deaths" class="hide"></p>
+                <p id="total-fee" class="hide"></p>
+            </div>
+            <div id="table-container" class="hide"></div>
+        </div>
     </main>
-    <footer class="footer-container max-width">
-        <p id="last-search-content" class="hide">
+    <p id="loading-message" class="hide">Carregando...</p>
+    <footer class="footer-container">
+        <p id="last-search-content">
             Última consulta em
             <span id="last-search-date"></span>, país
-            <span id="last-search-country"></span>
+            <span id="last-search-country"></span> |
+            <span> desenvolvido por <a target="_blank" href="https://github.com/augustocesarsousa">Augusto
+                    Cesar</a></span>
         </p>
     </footer>
     <script src="./js/index-main.js" type="module"></script>
-    <script src="./js/menu.js" ></script>
+    <script src="./js/menu.js"></script>
 </body>
 
 </html>

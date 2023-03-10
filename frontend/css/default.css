@@ -1,0 +1,75 @@
+/* cores */
+
+:root {
+    --black: #000;
+    --white: #fff;
+    --gray-25: #f2f2f2;
+    --gray-50: #c5c5c5;
+    --gray-100: #9e9e9e;
+    --green: #4fb746;
+    --green-50: #3a8334;
+    --red: #e02020;
+}
+
+/* containers */
+
+.header-container,
+.footer-container {
+    background-color: var(--white);
+    padding: 10px;
+}
+
+.main-container {
+    margin-top: 10px;
+}
+
+.footer-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+/* botão */
+
+.btn {
+    height: 37.5px;
+    width: 120px;
+    background-color: var(--green);
+    color: var(--gray-25);
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    transition: .3s ease all;
+}
+
+.btn:hover {
+    background-color: var(--green-50);
+}
+
+.btn:active {
+    background-color: var(--black);
+    color: var(--gray-25);
+}
+
+.container {
+    background-color: var(--gray-25);
+}
+
+/* select */
+
+select {
+    height: 35px;
+    min-width: 150px;
+    border-radius: 10px;
+    border: 1px solid var(--gray-100);
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+select:hover {
+    border: 1px solid var(--green-50);
+}
