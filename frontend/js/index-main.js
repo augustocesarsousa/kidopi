@@ -26,9 +26,11 @@ btnSelectCountry.addEventListener("click", async () => {
         pTotalDeaths.classList.add("hide");
         divTableContainer.classList.add("hide");
         pLoadingMessage.classList.remove("hide");
+        pLastSearchContent.classList.add("hide");
 
         const result = await getByCountryKidopi(country);
         createTableSearch(result);
+        createLastSearch();
 
         pTotalCases.classList.remove("hide");
         pTotalDeaths.classList.remove("hide");
@@ -70,6 +72,8 @@ const createLastSearch = async () => {
 
 const createTableSearch = (result) => {
 
+    totalCases = 0;
+    totalDeaths = 0;
     const table = document.createElement("table");
     const tableHeader = document.createElement("thead");
     const tableBody = document.createElement("tbody");

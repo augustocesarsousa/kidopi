@@ -35,6 +35,9 @@ btnSelectCountry.addEventListener("click", async () => {
 
     if (isSelectsValid) {
 
+        totalCasesCountry = 0;
+        totalDeathsCountry = 0;
+
         divTableContainer.classList.add("hide");
         pLoadingMessage.classList.remove("hide");
 
