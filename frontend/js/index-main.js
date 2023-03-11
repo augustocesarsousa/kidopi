@@ -30,7 +30,6 @@ btnSelectCountry.addEventListener("click", async () => {
         pTotalFee.classList.add("hide");
         divTableContainer.classList.add("hide");
         pLoadingMessage.classList.remove("hide");
-        // pLastSearchContent.classList.add("hide");
         dataContainer.classList.add("hide");
 
         const result = await getByCountryKidopi(country);
@@ -109,8 +108,7 @@ const createTableSearch = (result) => {
         tdCases.innerText = result[key].Confirmados.toLocaleString();
         tdDeaths.innerText = result[key].Mortos.toLocaleString();
         if (result[key].Confirmados > 0) {
-            fee = result[key].Mortos / result[key].Confirmados;
-            totalFee += fee;
+            fee = result[key].Mortos / result[key].Confirmados * 100;
         }
         tdFee.innerText = fee.toFixed(4);
 
@@ -125,9 +123,11 @@ const createTableSearch = (result) => {
         tableBody.appendChild(tr);
     }
 
+    totalFee = totalDeaths / totalCases * 100;
+
     pTotalCases.innerText = `Total de casos: ${totalCases.toLocaleString()}`;
     pTotalDeaths.innerText = `| Total de mortes: ${totalDeaths.toLocaleString()}`;
-    pTotalFee.innerText = `| Taxa total(%): ${totalFee.toFixed(4)}`;
+    pTotalFee.innerText = `| Taxa total(%): ${totalFee.toFixed(2)}`;
 
     table.appendChild(tableHeader);
     table.appendChild(tableBody);

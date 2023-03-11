@@ -16,13 +16,13 @@
     gap: 5px;
 }
 
-#legend-color1{
+#legend-color1 {
     background-color: var(--green-25);
     height: 8px;
     width: 8px;
 }
 
-#legend-color2{
+#legend-color2 {
     background-color: var(--blue-25);
     height: 8px;
     width: 8px;
@@ -30,8 +30,8 @@
 
 .graphic-content {
     display: flex;
-    align-items: center;   
-    justify-content: space-between; 
+    align-items: center;
+    justify-content: space-between;
 }
 
 .graphic-bars {
@@ -47,15 +47,16 @@
 
 .graphic-bars .col .scale-y {
     width: 40px;
-    margin-top: -18px;
+    margin-top: -12px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
 
-.graphic-bars .col .scale-y .division{
+.graphic-bars .col .scale-y .division {
     height: calc(100% / 6);
     padding-right: 5px;
+    font-size: 12px;
 }
 
 .graphic-bars .col .area-graphic {
@@ -84,7 +85,7 @@
     position: relative;
 }
 
-.graphic-bars .col .area-graphic .area-bars .division .bar-graphic span{    
+.graphic-bars .col .area-graphic .area-bars .division .bar-graphic span {
     font-size: 11.5px;
     position: absolute;
     top: -15px;

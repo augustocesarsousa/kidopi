@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/compare.css">
     <link rel="stylesheet" href="css/graphic.css">
-    <title>Comparar</title>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="assets/img/favicon.ico">
+    <title>Desafio Kidopi</title>
 </head>
 
 <body>
@@ -70,22 +71,22 @@
                 <!-- gráfico total de casos -->
                 <div class="graphic-bars">
                     <div class="col">
-                        <div class="scale-y">
-                            <div class="division">50M</div>
-                            <div class="division">40M</div>
-                            <div class="division">30M</div>
-                            <div class="division">20M</div>
-                            <div class="division">10M</div>
-                            <div class="division">0</div>
+                        <div id="total-cases-scale-y" class="scale-y">
+                            <!-- <p class="division">50M</p>
+                            <p class="division">40M</p>
+                            <p class="division">30M</p>
+                            <p class="division">20M</p>
+                            <p class="division">10M</p>
+                            <p class="division">0</p> -->
                         </div>
                         <div class="area-graphic">
                             <div class="area-bars">
                                 <div class="division">
                                     <div id="total-cases-bar1" class="bar-graphic green">
-                                        <span id="total-cases-bar-number1"></span>
+                                        <span id="total-cases-bar-legend1"></span>
                                     </div>
                                     <div id="total-cases-bar2" class="bar-graphic blue">
-                                        <span id="total-cases-bar-number2"></span>
+                                        <span id="total-cases-bar-legend2"></span>
                                     </div>
                                 </div>
                             </div>
@@ -98,22 +99,22 @@
                 <!-- gráfico total de mortes -->
                 <div class="graphic-bars">
                     <div class="col">
-                        <div class="scale-y">
-                            <div class="division">1M</div>
+                        <div id="total-deaths-scale-y" class="scale-y">
+                            <!-- <div class="division">1M</div>
                             <div class="division">800m</div>
                             <div class="division">600m</div>
                             <div class="division">400m</div>
                             <div class="division">200m</div>
-                            <div class="division">0</div>
+                            <div class="division">0</div> -->
                         </div>
                         <div class="area-graphic">
                             <div class="area-bars">
                                 <div class="division">
                                     <div id="total-deaths-bar1" class="bar-graphic green">
-                                        <span id="total-deaths-bar-number1"></span>
+                                        <span id="total-deaths-bar-legend1"></span>
                                     </div>
                                     <div id="total-deaths-bar2" class="bar-graphic blue">
-                                        <span id="total-deaths-bar-number2"></span>
+                                        <span id="total-deaths-bar-legend2"></span>
                                     </div>
                                 </div>
                             </div>
@@ -126,27 +127,27 @@
                 <!-- gráfico taxa -->
                 <div class="graphic-bars">
                     <div class="col">
-                        <div class="scale-y">
-                            <div class="division">1%</div>
+                        <div id="total-fee-scale-y" class="scale-y">
+                            <!-- <div class="division">1%</div>
                             <div class="division">0.8%</div>
                             <div class="division">0.6%</div>
                             <div class="division">0.4%</div>
                             <div class="division">0.2%</div>
-                            <div class="division">0%</div>
+                            <div class="division">0%</div> -->
                         </div>
                         <div class="area-graphic">
                             <div class="area-bars">
                                 <div class="division">
                                     <div id="total-fee-bar1" class="bar-graphic green">
-                                        <span id="total-fee-bar-number1"></span>
+                                        <span id="total-fee-bar-legend1"></span>
                                     </div>
                                     <div id="total-fee-bar2" class="bar-graphic blue">
-                                        <span id="total-fee-bar-number2"></span>
+                                        <span id="total-fee-bar-legend2"></span>
                                     </div>
                                 </div>
                             </div>
                             <div class="scale-x">
-                                <p class="pais1">Taxa</p>
+                                <p class="pais1">Taxa(%)</p>
                             </div>
                         </div>
                     </div>
