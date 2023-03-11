@@ -28,7 +28,7 @@
 }
 
 .table-content thead tr {
-    background-color: var(--green);
+    background-color: var(--green-25);
     color: var(--gray-25);
     font-weight: bold;
 }

@@ -4,12 +4,28 @@ const inputSelectCountry1 = document.getElementById("select-country1");
 const inputSelectCountry2 = document.getElementById("select-country2");
 const spanSelectCountryMessage = document.getElementById("select-country-message");
 const btnSelectCountry = document.getElementById("select-country-btn");
-const divTableContainer = document.getElementById("table-container");
+const divGraphicContainer = document.getElementById("graphic-container");
+const legentText1 = document.getElementById("legent-text1");
+const legentText2 = document.getElementById("legent-text2");
+const totalCasesBarNumber1 = document.getElementById("total-cases-bar-number1");
+const totalCasesBarNumber2 = document.getElementById("total-cases-bar-number2");
+const totalCasesBar1 = document.getElementById("total-cases-bar1");
+const totalCasesBar2 = document.getElementById("total-cases-bar2");
+const totalDeathsBarNumber1 = document.getElementById("total-deaths-bar-number1");
+const totalDeathsBarNumber2 = document.getElementById("total-deaths-bar-number2");
+const totalDeathsBar1 = document.getElementById("total-deaths-bar1");
+const totalDeathsBar2 = document.getElementById("total-deaths-bar2");
+const totalFeeBarNumber1 = document.getElementById("total-fee-bar-number1");
+const totalFeeBarNumber2 = document.getElementById("total-fee-bar-number2");
+const totalFeeBar1 = document.getElementById("total-fee-bar1");
+const totalFeeBar2 = document.getElementById("total-fee-bar2");
+const maxTotalCases = 50000000;
+const maxTotalDeaths = 1000000;
+const maxTotalFee = 1;
 let totalCasesCountry = 0;
 let totalDeathsCountry = 0;
-let feeCountry = 0;
+let totalFeeCountry = 0;
 const pLoadingMessage = document.getElementById("loading-message");
-const tableHeaderElements = ["País", "Casos confirmados", "Mortes confirmadas", "Taxa (%)"];
 
 btnSelectCountry.addEventListener("click", async () => {
 
@@ -27,10 +43,7 @@ btnSelectCountry.addEventListener("click", async () => {
 
     if (isSelectsValid) {
 
-        totalCasesCountry = 0;
-        totalDeathsCountry = 0;
-
-        divTableContainer.classList.add("hide");
+        divGraphicContainer.classList.add("hide");
         pLoadingMessage.classList.remove("hide");
 
         const countries = [country1, country2];
@@ -38,29 +51,33 @@ btnSelectCountry.addEventListener("click", async () => {
 
         for (const key in countries) {
 
+            totalCasesCountry = 0;
+            totalDeathsCountry = 0;
+            totalFeeCountry = 0;
+
             const result = await getByCountryKidopi(countries[key]);
 
             for (const key in result) {
                 totalCasesCountry += result[key].Confirmados;
                 totalDeathsCountry += result[key].Mortos;
-            }
 
-            if (totalCasesCountry > 0) {
-                feeCountry = totalDeathsCountry / totalCasesCountry;
+                if (result[key].Confirmados > 0) {
+                    totalFeeCountry += result[key].Mortos / result[key].Confirmados;
+                }
             }
 
             const data = {
                 'name': countries[key],
                 'totalCases': totalCasesCountry,
                 'totalDeaths': totalDeathsCountry,
-                'fee': feeCountry.toFixed(4)
+                'totalFee': totalFeeCountry.toFixed(4)
             }
 
             countriesData[key] = data;
         }
 
-        createTableCompare(countriesData);
-        divTableContainer.classList.remove("hide");
+        createGraphic(countriesData);
+        divGraphicContainer.classList.remove("hide");
         pLoadingMessage.classList.add("hide");
     }
 
@@ -74,44 +91,25 @@ const createSelectCountry = async () => {
     }
 }
 
-const createTableCompare = (countriesData) => {
+const createGraphic = (countriesData) => {
 
-    const table = document.createElement("table");
-    const tableHeader = document.createElement("thead");
-    const tableBody = document.createElement("tbody");
+    legentText1.innerText = countriesData[0].name;
+    legentText2.innerText = countriesData[1].name;
 
-    tableHeaderElements.map((element) => {
-        const th = document.createElement("th");
-        th.innerText = element;
-
-        tableHeader.appendChild(th);
-    });
-
-    for (const key in countriesData) {
-        const tr = document.createElement("tr");
-        const tdCountry = document.createElement("td");
-        const tdCases = document.createElement("td");
-        const tdDeaths = document.createElement("td");
-        const tdFee = document.createElement("td");
-
-        tdCountry.innerText = countriesData[key].name;
-        tdCases.innerText = countriesData[key].totalCases;
-        tdDeaths.innerText = countriesData[key].totalDeaths;
-        tdFee.innerText = countriesData[key].fee;
-
-        tr.appendChild(tdCountry);
-        tr.appendChild(tdCases);
-        tr.appendChild(tdDeaths);
-        tr.appendChild(tdFee);
-
-        tableBody.appendChild(tr);
-    }
-
-    table.appendChild(tableHeader);
-    table.appendChild(tableBody);
-
-    divTableContainer.replaceChildren();
-    divTableContainer.appendChild(table);
+    totalCasesBarNumber1.innerText = (countriesData[0].totalCases).toLocaleString();
+    totalCasesBarNumber2.innerText = (countriesData[1].totalCases).toLocaleString();
+    totalCasesBar1.style.height = (countriesData[0].totalCases / maxTotalCases * 100).toFixed(2) + "%";
+    totalCasesBar2.style.height = (countriesData[1].totalCases / maxTotalCases * 100).toFixed(2) + "%";
+    
+    totalDeathsBarNumber1.innerText = (countriesData[0].totalDeaths).toLocaleString();
+    totalDeathsBarNumber2.innerText = (countriesData[1].totalDeaths).toLocaleString();
+    totalDeathsBar1.style.height = (countriesData[0].totalDeaths / maxTotalDeaths * 100).toFixed(2) + "%";
+    totalDeathsBar2.style.height = (countriesData[1].totalDeaths / maxTotalDeaths * 100).toFixed(2) + "%";
+    
+    totalFeeBarNumber1.innerText = (countriesData[0].totalFee).toLocaleString();
+    totalFeeBarNumber2.innerText = (countriesData[1].totalFee).toLocaleString();
+    totalFeeBar1.style.height = (countriesData[0].totalFee / maxTotalFee * 100) + "%";
+    totalFeeBar2.style.height = (countriesData[1].totalFee / maxTotalFee * 100) + "%";
 }
 
 createSelectCountry();

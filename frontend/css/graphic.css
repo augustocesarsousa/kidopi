@@ -1,0 +1,107 @@
+@import url(default.css);
+
+.graphic-legend {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.legend-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+#legend-color1{
+    background-color: var(--green-25);
+    height: 8px;
+    width: 8px;
+}
+
+#legend-color2{
+    background-color: var(--blue-25);
+    height: 8px;
+    width: 8px;
+}
+
+.graphic-content {
+    display: flex;
+    align-items: center;   
+    justify-content: space-between; 
+}
+
+.graphic-bars {
+    width: 30%;
+    height: 300px;
+}
+
+.graphic-bars .col {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.graphic-bars .col .scale-y {
+    width: 40px;
+    margin-top: -18px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.graphic-bars .col .scale-y .division{
+    height: calc(100% / 6);
+    padding-right: 5px;
+}
+
+.graphic-bars .col .area-graphic {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.graphic-bars .col .area-graphic .area-bars {
+    flex-grow: 1;
+    border-left: 2px solid var(--gray-100);
+    border-bottom: 2px solid var(--gray-100);
+    display: flex;
+}
+
+.graphic-bars .col .area-graphic .area-bars .division {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 5px;
+}
+
+.graphic-bars .col .area-graphic .area-bars .division .bar-graphic {
+    width: 30%;
+    position: relative;
+}
+
+.graphic-bars .col .area-graphic .area-bars .division .bar-graphic span{    
+    font-size: 11.5px;
+    position: absolute;
+    top: -15px;
+    width: 100%;
+    text-align: center;
+}
+
+.graphic-bars .col .area-graphic .area-bars .division .bar-graphic.green {
+    background-color: var(--green-25);
+}
+
+.graphic-bars .col .area-graphic .area-bars .division .bar-graphic.blue {
+    background-color: var(--blue-25);
+}
+
+.graphic-bars .col .area-graphic .scale-x {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+}

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/compare.css">
-    <link rel="stylesheet" href="css/grafico.css">
+    <link rel="stylesheet" href="css/graphic.css">
     <title>Comparar</title>
 </head>
 
@@ -55,30 +55,99 @@
             <button id="select-country-btn" class="btn">Pesquisar</button>
             <span id="select-country-message" class="hide"></span>
         </div>
-        <div id="table-container" class="data-container">
-
-            <div class="grafico-barras">
-                <div class="colunas">
-                    <div class="escala-y">
-                        a
-                    </div>
-                    <div class="area-grafico">
-                        <div class="area-barras">
-                            <div class="divisao">
-                                <div class="barra verde" style="height: 80%;"></div>
-                                <div class="barra azul" style="height: 40%;"></div>
+        <div id="graphic-container" class="data-container hide">
+            <div class="graphic-legend">
+                <div class="legend-content">
+                    <div id="legend-color1"></div>
+                    <p id="legent-text1">País 1</p>
+                </div>
+                <div class="legend-content">
+                    <div id="legend-color2"></div>
+                    <p id="legent-text2">País 2</p>
+                </div>
+            </div>
+            <div class="graphic-content">
+                <!-- gráfico total de casos -->
+                <div class="graphic-bars">
+                    <div class="col">
+                        <div class="scale-y">
+                            <div class="division">50M</div>
+                            <div class="division">40M</div>
+                            <div class="division">30M</div>
+                            <div class="division">20M</div>
+                            <div class="division">10M</div>
+                            <div class="division">0</div>
+                        </div>
+                        <div class="area-graphic">
+                            <div class="area-bars">
+                                <div class="division">
+                                    <div id="total-cases-bar1" class="bar-graphic green">
+                                        <span id="total-cases-bar-number1"></span>
+                                    </div>
+                                    <div id="total-cases-bar2" class="bar-graphic blue">
+                                        <span id="total-cases-bar-number2"></span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="divisao">
-                                <div class="barra verde" style="height: 40%;"></div>
-                                <div class="barra azul" style="height: 30%;"></div>
-                            </div>
-                            <div class="divisao">
-                                <div class="barra verde" style="height: 10%;"></div>
-                                <div class="barra azul" style="height: 5%;"></div>
+                            <div class="scale-x">
+                                <p class="pais1">Total de casos</p>
                             </div>
                         </div>
-                        <div class="escala-x">
-                            c
+                    </div>
+                </div>
+                <!-- gráfico total de mortes -->
+                <div class="graphic-bars">
+                    <div class="col">
+                        <div class="scale-y">
+                            <div class="division">1M</div>
+                            <div class="division">800m</div>
+                            <div class="division">600m</div>
+                            <div class="division">400m</div>
+                            <div class="division">200m</div>
+                            <div class="division">0</div>
+                        </div>
+                        <div class="area-graphic">
+                            <div class="area-bars">
+                                <div class="division">
+                                    <div id="total-deaths-bar1" class="bar-graphic green">
+                                        <span id="total-deaths-bar-number1"></span>
+                                    </div>
+                                    <div id="total-deaths-bar2" class="bar-graphic blue">
+                                        <span id="total-deaths-bar-number2"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="scale-x">
+                                <p class="pais1">Total de mortos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- gráfico taxa -->
+                <div class="graphic-bars">
+                    <div class="col">
+                        <div class="scale-y">
+                            <div class="division">1%</div>
+                            <div class="division">0.8%</div>
+                            <div class="division">0.6%</div>
+                            <div class="division">0.4%</div>
+                            <div class="division">0.2%</div>
+                            <div class="division">0%</div>
+                        </div>
+                        <div class="area-graphic">
+                            <div class="area-bars">
+                                <div class="division">
+                                    <div id="total-fee-bar1" class="bar-graphic green">
+                                        <span id="total-fee-bar-number1"></span>
+                                    </div>
+                                    <div id="total-fee-bar2" class="bar-graphic blue">
+                                        <span id="total-fee-bar-number2"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="scale-x">
+                                <p class="pais1">Taxa</p>
+                            </div>
                         </div>
                     </div>
                 </div>

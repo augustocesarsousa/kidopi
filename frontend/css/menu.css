@@ -55,7 +55,7 @@ li {
 }
 
 .active-link {
-    background-color: var(--green);
+    background-color: var(--green-25);
     color: var(--white);
 }
 
@@ -71,7 +71,7 @@ li {
     margin: 5px auto;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
-    background-color: var(--green);
+    background-color: var(--green-25);
 }
 
 @media(max-width:768px) {

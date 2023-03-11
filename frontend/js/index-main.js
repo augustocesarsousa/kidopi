@@ -127,7 +127,7 @@ const createTableSearch = (result) => {
 
     pTotalCases.innerText = `Total de casos: ${totalCases.toLocaleString()}`;
     pTotalDeaths.innerText = `| Total de mortes: ${totalDeaths.toLocaleString()}`;
-    pTotalFee.innerText = `| Taxa(%): ${totalFee.toFixed(4)}`;
+    pTotalFee.innerText = `| Taxa total(%): ${totalFee.toFixed(4)}`;
 
     table.appendChild(tableHeader);
     table.appendChild(tableBody);
