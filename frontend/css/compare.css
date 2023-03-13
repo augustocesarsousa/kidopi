@@ -5,3 +5,14 @@
 #select-country2 {
     margin-right: 10px;
 }
+
+@media(max-width:576px) {
+
+    .select-country1-content label,
+    #select-country1,
+    .select-country2-content label,
+    #select-country2 {
+        margin-right: 0;
+    }
+
+}

@@ -106,3 +106,16 @@
     display: flex;
     justify-content: center;
 }
+
+@media(max-width:576px){
+
+    .graphic-content {
+        display: block;
+    }
+
+    .graphic-bars {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+}

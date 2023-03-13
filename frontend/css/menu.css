@@ -47,6 +47,7 @@ li {
     text-transform: uppercase;
     font-size: 14px;
     transition: .3s ease all;
+    background-color: var(--white);
 }
 
 .nav-link:hover {
@@ -71,7 +72,7 @@ li {
     margin: 5px auto;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
-    background-color: var(--green-25);
+    background-color: var(--green-50);
 }
 
 @media(max-width:768px) {
@@ -99,7 +100,7 @@ li {
         gap: 0;
         width: 100%;
         flex-direction: column;
-        background-color: var(--gray-25);
+        background-color: var(--white);
         text-align: center;
         transition: .3s ease;
     }

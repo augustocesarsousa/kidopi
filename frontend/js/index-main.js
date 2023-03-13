@@ -25,6 +25,8 @@ btnSelectCountry.addEventListener("click", async () => {
 
     if (country !== "") {
 
+        clearInterval(hideMessage);
+
         pTotalCases.classList.add("hide");
         pTotalDeaths.classList.add("hide");
         pTotalFee.classList.add("hide");
@@ -47,6 +49,7 @@ btnSelectCountry.addEventListener("click", async () => {
     } else {
         spanSelectCountryMessage.innerText = "Selecione um país!";
         spanSelectCountryMessage.classList.remove("hide");
+        hideMessage;
     }
 
 });
@@ -126,8 +129,8 @@ const createTableSearch = (result) => {
     totalFee = totalDeaths / totalCases * 100;
 
     pTotalCases.innerText = `Total de casos: ${totalCases.toLocaleString()}`;
-    pTotalDeaths.innerText = `| Total de mortes: ${totalDeaths.toLocaleString()}`;
-    pTotalFee.innerText = `| Taxa total(%): ${totalFee.toFixed(2)}`;
+    pTotalDeaths.innerText = `Total de mortes: ${totalDeaths.toLocaleString()}`;
+    pTotalFee.innerText = `Taxa total(%): ${totalFee.toFixed(2)}`;
 
     table.appendChild(tableHeader);
     table.appendChild(tableBody);
@@ -135,6 +138,10 @@ const createTableSearch = (result) => {
     divTableContainer.replaceChildren();
     divTableContainer.appendChild(table);
 }
+
+const hideMessage = setInterval(() => {
+    spanSelectCountryMessage.classList.add("hide");
+}, 4000);
 
 createSelectCountry();
 createLastSearch();

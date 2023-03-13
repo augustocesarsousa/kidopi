@@ -63,9 +63,14 @@ btnSelectCountry.addEventListener("click", async () => {
 
     // valida os países selecionados
     if (country1 === "" || country2 === "") {
-        // exibe mensagem de validação dos países selecionados
+        // adciona texto no span de mensagem
         spanSelectCountryMessage.innerText = "Seleciona os dois países!";
+        // exibe mensagem de validação dos países selecionados
+        spanSelectCountryMessage.classList.remove("hide");
     } else {
+
+        // limpa o setInterval
+        clearInterval(hideMessage);
 
         // esconde contâiner dos gráficos
         divGraphicContainer.classList.add("hide");
@@ -248,6 +253,11 @@ const createScaleY = (yScaleValue, scaleY, percent = 0.0) => {
         percent += 0.2;
     }
 }
+
+// esconde mensagem de erro
+const hideMessage = setInterval(() => {
+    spanSelectCountryMessage.classList.add("hide");
+}, 4000);
 
 // chama função para popular os selects
 createSelectCountry();

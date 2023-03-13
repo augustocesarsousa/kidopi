@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/about.css">
     <link rel="icon" type="image/vnd.microsoft.icon" href="assets/img/favicon.ico">
     <title>Desafio Kidopi</title>
 </head>
@@ -37,7 +38,39 @@
         </div>
     </header>
     <main class="main-container max-width">
-        <p>Em construção...</p>
+        <div class="data-container">
+            <h1 class="title-1">Desafio Kidopi</h1>
+            <h2 class="title-2">Descrição:</h2>
+            <p> O exercício consistirá na construção de um sistema (interface web) que possibilite ao usuário obter informações sobre os casos de mortes por Covid. Estes dados serão obtidos por meio da API-Covid-19 que está disponível no servidor da Kidopi. É possível obter dados do número de casos confirmados e mortes de vários países afetados pela COVID-19.</p>
+            <h2 class="title-2">Importante:</h2>
+            <p>Use PHP para fazer o backend!</p>
+            <h2 class="title-2">1ª parte:</h2>
+            <p>Você deve criar uma página que permita escolher entre três países (Brazil, Canada ou Australia) e se comunique com a API-Covid-19. Ela também deverá mostrar o número total de casos confirmados e mortes do país selecionado. Ao selecionar um país, a página deve exibir os dados de cada estado também (os dados podem ser exibidos da maneira que você preferir).</p>
+            <h2 class="title-2">2ª parte:</h2>
+            <p>Você também deve armazenar em um banco de dados (MySQL) a data e hora de todos os acessos que seu script fez à API-Covid-19, bem como qual o país escolhido para a consulta.</p>
+            <h2 class="title-2">3ª parte:</h2>
+            <p>Sua página deve ser criada utilizando HTML, CSS e JS. Mostre no rodapé da página, a data e o país procurado do último acesso à API-Covid-19.</p>
+            <h2 class="title-2">Parte Bônus:</h2>
+            <p>Essa parte não é obrigatória, você faz se quiser.</p>
+            <p>Faça uma interface web local (ou reaproveite a já criada das partes anteriores) em que o usuário possa escolher dois países diferentes (não precisa escolher estado), os países disponíveis para escolha devem ser todos os listados pela 'API-Países-Disponíveis'. Pegue os dados de covid desses países escolhidos e mostre na interface a diferença da taxa de morte entre esses países selecionados (taxa de morte do país todo). Para esse cálculo da diferença utilize de subtração simples (TaxaPais1 - TaxaPais2).</p>
+            <p>A taxa de morte pode ser calculada pela fórmula: Taxa de morte = Mortes / Confirmados.</p>
+            <h2 class="title-2">API-Covid-19:</h2>
+            <p>Método: GET</p>
+            <p class="mb-15">URL: https://dev.kidopilabs.com.br/exercicio/covid.php?pais=Brazil</p>
+            <p>Retorno:</p>
+            <p class="mb-15">{"0":{"ProvinciaEstado":"Acre","Pais":"Brazil","Confirmados":149378,"Mortos":2027},<br>
+                "1":{"ProvinciaEstado":"Alagoas","Pais":"Brazil","Confirmados":320552,"Mortos":7118}</p>
+            <h2 class="title-2">API-Países-Disponíveis:</h2>
+            <p>Método: GET</p>
+            <p class="mb-15">URL: https://dev.kidopilabs.com.br/exercicio/covid.php?listar_paises=1</p>
+            <p>Retorno:</p>
+            <p class="mb-15">{"0":"Afghanistan","1":"Albania","2":"Algeria","3":"Andorra","4":"Angola","5":"Antarctica"...}</p>
+            <h2 class="title-2">Observações:</h2>
+            <p>1 - Os nomes dos países estão em inglês.</p>
+            <p>2 - Alguns países retornam só o valor total de casos confirmados e de mortes no país inteiro, sem os dados por estado.</p>
+            <p>3 - A API-Covid-19 retorna os dados de todos os estados do país, você pode mudar o nome do país no final do link para o nome do país que deseja pegar os dados.</p>
+            <p>4 - A API-Países-Disponíveis retorna o nome de todos os países disponíveis para obter os dados.</p>                
+        </div>
     </main>
     <footer class="footer-container">
         <p id="last-search-content">
