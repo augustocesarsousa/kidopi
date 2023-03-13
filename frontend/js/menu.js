@@ -1,3 +1,5 @@
+"use strick";
+
 const hamburger = document.querySelector(".nav-hamburger");
 const navMenu = document.querySelector(".nav-menu");
 

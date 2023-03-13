@@ -18,14 +18,14 @@
 
 #legend-color1 {
     background-color: var(--green-25);
-    height: 8px;
-    width: 8px;
+    min-height: 8px;
+    min-width: 8px;
 }
 
 #legend-color2 {
     background-color: var(--blue-25);
-    height: 8px;
-    width: 8px;
+    min-height: 8px;
+    min-width: 8px;
 }
 
 .graphic-content {
@@ -107,7 +107,7 @@
     justify-content: center;
 }
 
-@media(max-width:576px){
+@media(max-width:576px) {
 
     .graphic-content {
         display: block;
@@ -116,6 +116,17 @@
     .graphic-bars {
         width: 100%;
         margin-top: 30px;
+    }
+
+}
+
+
+@media(max-width:320px) {
+
+    .graphic-legend {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
 }

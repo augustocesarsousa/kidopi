@@ -14,3 +14,7 @@
 .mb-15 {
     margin-bottom: 15px;
 }
+
+.data-container p {
+    word-wrap: break-word;
+}

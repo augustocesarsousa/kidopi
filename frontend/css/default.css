@@ -15,7 +15,7 @@
 
 /* margin */
 
-.mr-10{
+.mr-10 {
     margin-right: 10px;
 }
 
@@ -36,9 +36,11 @@
     bottom: 0;
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
+    font-size: 12px;
 }
 
 /* botão */
@@ -121,8 +123,9 @@ select:hover {
     padding: 40px;
     border-radius: 10px;
     margin-top: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
     box-sizing: border-box;
+    width: 100%;
 }
 
 @media(max-width:1200px) {
@@ -136,7 +139,7 @@ select:hover {
 
     .data-container {
         padding: 30px;
-        margin-bottom: 80px;
+        margin-bottom: 70px;
     }
 
     .select-country-container {
@@ -171,7 +174,7 @@ select:hover {
 @media(max-width:320px) {
 
     .data-container {
-        margin-bottom: 105px;
+        margin-bottom: 90px;
     }
 
 }

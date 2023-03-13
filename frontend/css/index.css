@@ -68,6 +68,10 @@
     text-align: right;
 }
 
+#last-search-content {
+    text-align: center;
+}
+
 @media(max-width:576px) {
     .data-total-container {
         display: flex;
@@ -76,7 +80,7 @@
     }
 
     .data-total-container p {
-        width: 100%;        
+        width: 100%;
     }
 
     #table-container {

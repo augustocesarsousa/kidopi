@@ -1,10 +1,12 @@
+"use strick";
+
 import { getByCountryKidopi, getCountriesAvailableKidopi } from "./services/kidopi-api-service.js";
 
 // select país 1
 const inputSelectCountry1 = document.getElementById("select-country1");
 // select país 2
 const inputSelectCountry2 = document.getElementById("select-country2");
-// spam de mensagem
+// span de mensagem
 const spanSelectCountryMessage = document.getElementById("select-country-message");
 // botão de pesquisa
 const btnSelectCountry = document.getElementById("select-country-btn");
