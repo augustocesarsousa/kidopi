@@ -1,11 +1,17 @@
 <?php
+    // IP do servidor
     $host = "127.0.0.1";
+    // usuário do banco
     $user = "root";
+    // senha do banco
     $password = "root@123";
+    // nome da base
     $dbname = "db_kidopi";
+    // porta do banco
     $port = 3306;
 
-    try{
+    // tenta fazer a conexão
+    try{        
         $conn = new PDO("mysql:host=$host;port=$port;dbname=".$dbname, $user, $password);
 
         //echo "Conexão com banco de dados realizado com sucesso!";
