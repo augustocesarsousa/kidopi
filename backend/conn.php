@@ -4,7 +4,7 @@
     // usuário do banco
     $user = "root";
     // senha do banco
-    $password = "root@123";
+    $password = "";
     // nome da base
     $dbname = "db_kidopi";
     // porta do banco

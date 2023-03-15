@@ -1,5 +1,6 @@
 "use strick";
 
+// import do serviço da API Kidopi
 import { getByCountryKidopi, getCountriesAvailableKidopi } from "./services/kidopi-api-service.js";
 
 // select país 1
